@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,66 +9,78 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Custom tailwind here  -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'primary-color': '#1DD100',
-            'base-black': '#030712',
-          }
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-color': '#1DD100',
+                        'base-black': '#030712',
+                    }
+                }
+            }
         }
-      }
-    }
-  </script>
+    </script>
 
     <!-- tailwind css link  -->
     <link rel="stylesheet" href="styles/styles.css">
 
 </head>
+
 <body class="max-w-[1300px] mx-auto">
     <!-- header section here------------------------>
-    <header>
+    <header class="hidden">
         <!-- nav bar here !!!!!!!!!!!!!  -->
         <nav class="font-raleway">
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
-                  <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-lg font-medium">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Destination</a></li>
+                            <li><a>Search</a></li>
+                        </ul>
                     </div>
-                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-lg font-medium">
-                      <li><a>Home</a></li>
-                      <li><a>About</a></li>
-                      <li><a>Destination</a></li>
-                      <li><a>Search</a></li>
-                    </ul>
-                  </div>
-                  <a class="btn btn-ghost text-xl text-base-black ">H-Travel</a>
+                    <a class="btn btn-ghost text-xl text-base-black ">H-Travel</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
-                  <ul class="menu menu-horizontal px-1 text-lg font-medium">
-                    <li><a>Home</a></li>
-                    <li><a>About</a></li>
-                    <li><a>Destination</a></li>
-                    <li><a>Search</a></li>
-                  </ul>
+                    <ul class="menu menu-horizontal px-1 text-lg font-medium">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
                 </div>
                 <div class="navbar-end">
-                  <a class="btn border-2 border-[#1DD10066] bg-[#1DD1001A] text-xl font-bold text-primary-color">Bus <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M4 17C4 17.5304 4.21071 18.0391 4.58579 18.4142C4.96086 18.7893 5.46957 19 6 19C6.53043 19 7.03914 18.7893 7.41421 18.4142C7.78929 18.0391 8 17.5304 8 17M4 17C4 16.4696 4.21071 15.9609 4.58579 15.5858C4.96086 15.2107 5.46957 15 6 15C6.53043 15 7.03914 15.2107 7.41421 15.5858C7.78929 15.9609 8 16.4696 8 17M4 17H2V6C2 5.73478 2.10536 5.48043 2.29289 5.29289C2.48043 5.10536 2.73478 5 3 5H17C18.3261 5 19.5979 5.7375 20.5355 7.05025C21.4732 8.36301 22 10.1435 22 12M8 17H16M16 17C16 17.5304 16.2107 18.0391 16.5858 18.4142C16.9609 18.7893 17.4696 19 18 19C18.5304 19 19.0391 18.7893 19.4142 18.4142C19.7893 18.0391 20 17.5304 20 17M16 17C16 16.4696 16.2107 15.9609 16.5858 15.5858C16.9609 15.2107 17.4696 15 18 15C18.5304 15 19.0391 15.2107 19.4142 15.5858C19.7893 15.9609 20 16.4696 20 17M20 17H22V12M22 12H17.5L16 5M2 10H17M7 5V10M12 5V10" stroke="#1DD100" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg></a>
+                    <a class="btn border-2 border-[#1DD10066] bg-[#1DD1001A] text-xl font-bold text-primary-color">Bus
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M4 17C4 17.5304 4.21071 18.0391 4.58579 18.4142C4.96086 18.7893 5.46957 19 6 19C6.53043 19 7.03914 18.7893 7.41421 18.4142C7.78929 18.0391 8 17.5304 8 17M4 17C4 16.4696 4.21071 15.9609 4.58579 15.5858C4.96086 15.2107 5.46957 15 6 15C6.53043 15 7.03914 15.2107 7.41421 15.5858C7.78929 15.9609 8 16.4696 8 17M4 17H2V6C2 5.73478 2.10536 5.48043 2.29289 5.29289C2.48043 5.10536 2.73478 5 3 5H17C18.3261 5 19.5979 5.7375 20.5355 7.05025C21.4732 8.36301 22 10.1435 22 12M8 17H16M16 17C16 17.5304 16.2107 18.0391 16.5858 18.4142C16.9609 18.7893 17.4696 19 18 19C18.5304 19 19.0391 18.7893 19.4142 18.4142C19.7893 18.0391 20 17.5304 20 17M16 17C16 16.4696 16.2107 15.9609 16.5858 15.5858C16.9609 15.2107 17.4696 15 18 15C18.5304 15 19.0391 15.2107 19.4142 15.5858C19.7893 15.9609 20 16.4696 20 17M20 17H22V12M22 12H17.5L16 5M2 10H17M7 5V10M12 5V10"
+                                stroke="#1DD100" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></a>
                 </div>
-              </div>
+            </div>
         </nav>
 
         <!-- banner section here ------------  -->
         <div class="hero h-auto rounded-3xl font-raleway py-16" style="background-image: url('../images/banner.png')">
             <div class="hero-content text-center text-neutral-content">
                 <div class="min-w-fit">
-                <h1 class="mb-5 font-extrabold text-6xl text-center">End-to-End Travel with <br><span class="text-primary-color">H Paribahan</span></h1>
-                <p class="mb-5 font-inter text-lg text-center">Travel Travel Travel Travel Travel Travel Travel Travel Travel </p>
-                <button class="btn btn-success bg-primary-color text-base-black text-xl font-bold border-[0px]">Buy Tickets</button>
+                    <h1 class="mb-5 font-extrabold text-6xl text-center">End-to-End Travel with <br><span
+                            class="text-primary-color">H Paribahan</span></h1>
+                    <p class="mb-5 font-inter text-lg text-center">Travel Travel Travel Travel Travel Travel Travel
+                        Travel Travel </p>
+                    <button class="btn btn-success bg-primary-color text-base-black text-xl font-bold border-[0px]">Buy
+                        Tickets</button>
                 </div>
             </div>
         </div>
@@ -75,7 +88,75 @@
     </header>
     <!-- main section here ----------------------->
     <main>
+        <!-- best offer section  -->
+        <div>
+            <h3 class="text-base-black text-4xl font-bold text-center">Best offers for you</h3>
+            <!-- ooofeerrrrrrrrrrrrrrrrrr  -->
+            <div class="flex justify-between gap-8 my-8">
+                <!-- left offer  -->
+                <div class="flex bg-[#FFBF0F] rounded-3xl px-14 flex-1">
+                    <!-- offer name  -->
+                    <div class="font-inter flex flex-col justify-center flex-1">
+                        <h2 class="text-4xl font-black text-[#030712CC]">15% OFF</h2>
+                        <h2 class="text-xl font-semibold text-[#030712CC]">on your next purchase</h2>
+                        <h2 class="text-lg font-medium text-[#03071280]">use by January 2024</h2>
+                    </div>
+                    <!-- divider  -->
+                    <div class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="220" viewBox="0 0 48 220"
+                            fill="none">
+                            <path
+                                d="M2.09815e-06 -3.81596e-07C1.82261e-06 3.15172 0.620775 6.27259 1.82689 9.1844C3.033 12.0962 4.80083 14.742 7.02943 16.9706C9.25804 19.1992 11.9038 20.967 14.8156 22.1731C17.7274 23.3792 20.8483 24 24 24C27.1517 24 30.2726 23.3792 33.1844 22.1731C36.0962 20.967 38.742 19.1992 40.9706 16.9706C43.1992 14.742 44.967 12.0962 46.1731 9.1844C47.3792 6.27259 48 3.15173 48 1.90735e-06L2.09815e-06 -3.81596e-07Z"
+                                fill="white" />
+                            <path
+                                d="M48 220C48 216.848 47.3792 213.727 46.1731 210.815C44.967 207.904 43.1992 205.258 40.9706 203.029C38.742 200.801 36.0962 199.033 33.1844 197.827C30.2726 196.621 27.1517 196 24 196C20.8483 196 17.7274 196.621 14.8156 197.827C11.9038 199.033 9.25804 200.801 7.02944 203.029C4.80083 205.258 3.033 207.904 1.82689 210.815C0.620778 213.727 -2.75532e-07 216.848 0 220L48 220Z"
+                                fill="white" />
+                            <line x1="25" y1="32" x2="25" y2="188" stroke="white" stroke-width="2"
+                                stroke-dasharray="5 5" />
+                        </svg>
+                    </div>
+                    <!-- coupon code  -->
+                    <div class="flex flex-col justify-center flex-1">
+                        <h2 class="text-3xl font-bold text-center text-base-black">NEW15</h2>
+                        <h2 class="text-xl font-medium text-center text-[#03071266]">Coupon Code</h2>
+                    </div>
+                </div>
+                <!-- right offer  -->
+                <div class="flex bg-[#FFBF0F] rounded-3xl px-14 flex-1">
+                    <!-- offer name  -->
+                    <div class="font-inter flex flex-col justify-center flex-1">
+                        <h2 class="text-4xl font-black text-[#030712CC]">15% OFF</h2>
+                        <h2 class="text-xl font-semibold text-[#030712CC]">on your next purchase</h2>
+                        <h2 class="text-lg font-medium text-[#03071280]">use by January 2024</h2>
+                    </div>
+                    <!-- divider  -->
+                    <div class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="220" viewBox="0 0 48 220"
+                            fill="none">
+                            <path
+                                d="M2.09815e-06 -3.81596e-07C1.82261e-06 3.15172 0.620775 6.27259 1.82689 9.1844C3.033 12.0962 4.80083 14.742 7.02943 16.9706C9.25804 19.1992 11.9038 20.967 14.8156 22.1731C17.7274 23.3792 20.8483 24 24 24C27.1517 24 30.2726 23.3792 33.1844 22.1731C36.0962 20.967 38.742 19.1992 40.9706 16.9706C43.1992 14.742 44.967 12.0962 46.1731 9.1844C47.3792 6.27259 48 3.15173 48 1.90735e-06L2.09815e-06 -3.81596e-07Z"
+                                fill="white" />
+                            <path
+                                d="M48 220C48 216.848 47.3792 213.727 46.1731 210.815C44.967 207.904 43.1992 205.258 40.9706 203.029C38.742 200.801 36.0962 199.033 33.1844 197.827C30.2726 196.621 27.1517 196 24 196C20.8483 196 17.7274 196.621 14.8156 197.827C11.9038 199.033 9.25804 200.801 7.02944 203.029C4.80083 205.258 3.033 207.904 1.82689 210.815C0.620778 213.727 -2.75532e-07 216.848 0 220L48 220Z"
+                                fill="white" />
+                            <line x1="25" y1="32" x2="25" y2="188" stroke="white" stroke-width="2"
+                                stroke-dasharray="5 5" />
+                        </svg>
+                    </div>
+                    <!-- coupon code  -->
+                    <div class="flex flex-col justify-center flex-1">
+                        <h2 class="text-3xl font-bold text-center text-base-black">NEW15</h2>
+                        <h2 class="text-xl font-medium text-center text-[#03071266]">Coupon Code</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <button class="btn btn-success bg-white text-primary-color">See All Offers</button>
+            </div>
 
+        </div>
+
+        </div>
     </main>
     <!-- footer section here -------------------------->
     <footer>
@@ -85,4 +166,5 @@
     <script src="scripts/utility.js"></script>
     <script src="scripts/index.js"></script>
 </body>
+
 </html>
