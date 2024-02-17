@@ -11,3 +11,7 @@
 .font-inter {
     font-family: "Inter", sans-serif;
 }
+.selected-btn {
+    background-color: #1DD100;
+    color: white;
+}
