@@ -183,7 +183,7 @@
                                 <p>
                                     <button class="btn border-2 border-[#1DD10066] bg-[#1DD1001A] text-xl font-bold text-primary-color flex justify-center items-center">
                                         <img src="./images/seat-green.png" alt="">
-                                        <p> <span>40</span> seat left</p>
+                                        <p> <span id="available-seat">40</span> seat left</p>
                                     </button>
                                 </p>
                             </div>
@@ -233,7 +233,7 @@
                                 </div>
                             </div>
                             <!-- driver png  -->
-                            <div class="flex float-end">
+                            <div class="flex float-end mb-8">
                                 <button class="btn px-5">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                                     <path d="M16 28C14.4241 28 12.8637 27.6896 11.4078 27.0866C9.95189 26.4835 8.62902 25.5996 7.51472 24.4853C6.40042 23.371 5.5165 22.0481 4.91345 20.5922C4.31039 19.1363 4 17.5759 4 16C4 14.4241 4.31039 12.8637 4.91345 11.4078C5.5165 9.95189 6.40042 8.62902 7.51472 7.51472C8.62902 6.40042 9.95189 5.5165 11.4078 4.91345C12.8637 4.31039 14.4241 4 16 4C17.5759 4 19.1363 4.31039 20.5922 4.91345C22.0481 5.5165 23.371 6.40042 24.4853 7.51472C25.5996 8.62902 26.4835 9.95189 27.0866 11.4078C27.6896 12.8637 28 14.4241 28 16C28 17.5759 27.6896 19.1363 27.0866 20.5922C26.4835 22.0481 25.5996 23.371 24.4853 24.4853C23.371 25.5996 22.0481 26.4835 20.5922 27.0866C19.1363 27.6896 17.5759 28 16 28ZM16 28V18.6667M13.3333 16C13.3333 16.7072 13.6143 17.3855 14.1144 17.8856C14.6145 18.3857 15.2928 18.6667 16 18.6667M13.3333 16C13.3333 15.2928 13.6143 14.6145 14.1144 14.1144C14.6145 13.6143 15.2928 13.3333 16 13.3333C16.7072 13.3333 17.3855 13.6143 17.8856 14.1144C18.3857 14.6145 18.6667 15.2928 18.6667 16M13.3333 16L4.33333 13.3333M16 18.6667C16.7072 18.6667 17.3855 18.3857 17.8856 17.8856C18.3857 17.3855 18.6667 16.7072 18.6667 16M18.6667 16L27.6667 13.3333" stroke="#030712" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -241,7 +241,7 @@
                                 </button>
                             </div>
                         <!-- selection  -->
-                        <div class="grid grid-cols-5">
+                        <div class="grid grid-cols-5 gap-3">
                             <!-- row A  -->
                             <h1>A</h1>
                             <button class="seat btn bg-btn-color">A1</button>
@@ -319,6 +319,7 @@
                             </div>
                             <hr>
                             <!-- updated part  -->
+                            
                         </div>
                         <!-- result part  -->
                         <div class="flex justify-between font-inter font-mono text-base-black bg-btn-color p-4">
@@ -328,7 +329,7 @@
                         <!-- coupon  -->
                         <div class="flex justify-between bg-btn-color">
                             <input id="input-coupon" class="ml-3 w-4/5 bg-white border rounded-xl" type="text" placeholder="Have any copupon?">
-                            <button class="btn selected-btn">Apply</button>
+                            <button id="apply-btn" class="btn selected-btn cursor-not-allowed" >Apply</button>
                         </div>
                         <!-- grand total  -->
                         <div class="flex justify-between font-inter font-mono text-base-black bg-btn-color rounded-b-2xl p-4">
@@ -341,19 +342,40 @@
                             <!-- name  -->
                             <div>
                                 <h1 class="text-base-black font-semibold font-inter my-3">Passenger Name*</h1>
-                                <input class="border py-2 px-4 rounded-2xl w-4/5" type="text" placeholder="Your Name">
+                                <input class="border py-2 px-4 rounded-2xl w-4/5" type="text" placeholder="Enter your Name">
                             </div>
                             <!-- phone number  -->
                             <div>
                                 <h1 class="text-base-black font-semibold font-inter my-3">Phone Number*</h1>
-                                <input class="border py-2 px-4 rounded-2xl w-4/5" type="text" placeholder="Your Name">
+                                <input id="input-phone" class="border py-2 px-4 rounded-2xl w-4/5" type="text" placeholder="Enter your phone number">
                             </div>
                             <!-- Email  -->
                             <div>
                                 <h1 class="text-base-black font-semibold font-inter my-3">Email</h1>
-                                <input class="border py-2 px-4 rounded-2xl w-4/5" type="email" placeholder="Your Email">
+                                <input class="border py-2 px-4 rounded-2xl w-4/5" type="email" placeholder="Enter your email">
                             </div>
-                            <button class="btn selected-btn w-full mt-5">Next</button>
+                            <!-- The button to open modal -->
+                            <div class="font-roboto text-center">
+                                <label id="modal-open" for="my_modal_6" class="btn selected-btn cursor-not-allowed">open modal</label>
+
+<!-- Put this part before </body> tag -->
+<input type="checkbox" id="my_modal_6" class="modal-toggle" />
+<div class="modal" role="dialog">
+  <div class="modal-box">
+    <div class="flex justify-center">
+        <img src="./images/success.png" alt="">
+    </div>
+    <h2 class="text-2xl font-bold text-[#27AE60]">Success</h2>
+    <h3 class="text-xl font-medium text-[#4A4A4A]">Thank you for Booking Our Bus Seats. 
+        We are working hard to find the best service and deals for you. 
+    </h3>
+    <h4 class="text-xl font-light text-[#4A4A4A]">Shortly you will find a confirmation in your email.</h4>
+    <div class="modal-action flex justify-center">
+      <label for="my_modal_6" class="btn bg-[#27AE60] w-3/4">Continue</label>
+    </div>
+  </div>
+</div>
+                            </div>
                         </section>
                     </div>
                 </div>
