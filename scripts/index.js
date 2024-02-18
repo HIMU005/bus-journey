@@ -13,7 +13,7 @@ for(let i = 0;i < seats.length; i++) {
         if(availableForYou <=0) {
             alert("You can't buy more more than 4");
         }
-        const updatedTable= document.getElementById("selected-table");
+        const updatedTable= document.getElementById("update-list");
         const div = document.createElement("div");
         const h1 = document.createElement("h1");
         const h2 = document.createElement("h2");
@@ -47,15 +47,10 @@ for(let i = 0;i < seats.length; i++) {
         if(fare>2000) {
             makeButtonAble('apply-btn');
         }
-        // const phone = document.getElementById('input-phone');
-        // phoneNumber = phone.addEventListener("change", function(e) {
-        //     phoneNumberLength = e.target.value;
-        //     console.log(phoneNumberLength);
-        // })
 
-        // if(phone.length  && selectTotalSeat) {
-        //     makeButtonAble('modal-open');
-        // }
+        if(phoneNumberLength  && selectTotalSeat) {
+            makeButtonAble('modal-open');
+        }
 
 
 
@@ -71,6 +66,24 @@ phoneNumber = phone.addEventListener("input", function(e) {
     }
 })
 
+function jumpBack() {
+    availableSeat = 40;
+    selectTotalSeat = 0;
+    availableForYou = 4;
+    fare = 0;
+    document.getElementById('coupon-div').classList.remove('hidden');
+    setNumberById('selected-seat-number', 0);
+    setNumberById('total-price', 0);
+    setNumberById('grand-price', 0);
+    setNumberById('available-seat', 40);
+    removeAllChildren('discount-amount');
+    removeAllChildren('update-list');
 
+    for(let i = 0; i < selectedSeat.length;i++) {
+        let store = selectedSeat[i];
+        document.getElementById(store).classList.remove("bg-[#1DD100]");
+    }
+    }
 
+    
 

@@ -47,7 +47,6 @@ function checkValid() {
         h2.innerText = "BDT " + discountPrice;
         disCountPart.appendChild(h1);
         disCountPart.appendChild(h2);
-        console.log(typeof disCountPart);
         document.getElementById('grand-price').innerText = fare - discountPrice;
         document.querySelector('#coupon-div').classList.add("hidden");
 
@@ -59,7 +58,12 @@ function checkValid() {
     }
 }
 
-
+function removeAllChildren(parentID) {
+    var parent = document.getElementById(parentID);
+    while (parent.firstChild) {
+      parent.removeChild(parent.firstChild);
+    }
+  }
 
 // function removeAllowCursorById() {
 //     const element = document.querySelector(elementID);
