@@ -64,6 +64,9 @@ phoneNumber = phone.addEventListener("input", function(e) {
     if(phoneNumberLength  && selectTotalSeat) {
         makeButtonAble('modal-open');
     }
+    if(phoneNumberLength===0) {
+        makeButtonDisable("modal-open");
+    }
 })
 
 function jumpBack() {
@@ -89,7 +92,9 @@ function jumpBack() {
     document.getElementById('input-name').value = "";
     document.getElementById('input-email').value = "";
     document.getElementById('input-phone').value = "";
+    makeButtonDisable("modal-open");
+    makeButtonDisable("apply-btn");
+    phoneNumberLength = 0;
     }
 
-    
 

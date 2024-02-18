@@ -24,6 +24,9 @@ function makeItFlexByContainer(element) {
 function makeButtonAble(elementID) {
     document.getElementById(elementID).disabled = false;
 }
+function makeButtonDisable(elementID) {
+    document.getElementById(elementID).disabled = true;
+}
 
 function enteredCoupon(elementID) {
     const element = getElementById(elementID);

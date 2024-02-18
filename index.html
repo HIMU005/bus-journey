@@ -30,7 +30,7 @@
 
 <body>
     <!-- header section here------------------------>
-    <header class=" max-w-[1300px] mx-auto">
+    <header class=" w-4/5 mx-auto">
         <!-- nav bar here !!!!!!!!!!!!!  -->
         <nav class="font-raleway">
             <div class="navbar bg-base-100">
@@ -90,10 +90,10 @@
     <!-- main section here ----------------------->
     <main class="bg-white">
         <!-- best offer section  -->
-        <div class="max-w-[1300px] mx-auto">
+        <div class="w-4/5 mx-auto">
             <h3 class="text-base-black text-4xl font-bold text-center">Best offers for you</h3>
             <!-- ooofeerrrrrrrrrrrrrrrrrr  -->
-            <div class="flex justify-between gap-8 my-8">
+            <div class="flex justify-between  gap-8 my-8 flex-col lg:flex-row">
                 <!-- left offer  -->
                 <div class="flex bg-[#FFBF0F] rounded-3xl px-14 flex-1">
                     <!-- offer name  -->
@@ -158,7 +158,7 @@
         </div>
         
         <!-- main main section  -->
-        <div id="main-main" class="my-12 border border-primary-color bg-white rounded-t-[88px] py-16">
+        <div id="main-main" class="my-[10%] border border-primary-color bg-white rounded-t-[88px] py-[10%]">
             <div class="my-8">
                 <h2 class="text-4xl font-bold text-base-black text-center">H Paribahan</h2>
                 <p class="text-lg text-center text-[#03071299]">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
@@ -350,21 +350,21 @@
                             <!-- name  -->
                             <div>
                                 <h1 class="text-base-black font-semibold font-inter my-3">Passenger Name*</h1>
-                                <input id="input-name" class="border py-2 px-4 rounded-2xl w-4/5" type="text" placeholder="Enter your Name">
+                                <input id="input-name" class="border py-2 px-4 rounded-2xl w-4/5 border-[3px]" type="text" placeholder="Enter your Name">
                             </div>
                             <!-- phone number  -->
                             <div>
                                 <h1 class="text-base-black font-semibold font-inter my-3">Phone Number*</h1>
-                                <input id="input-phone" class="border py-2 px-4 rounded-2xl w-4/5" type="text" placeholder="Enter your phone number">
+                                <input id="input-phone" class="border py-2 px-4 rounded-2xl w-4/5 border-[3px]" type="text" placeholder="Enter your phone number">
                             </div>
                             <!-- Email  -->
                             <div class="mb-5">
                                 <h1 class="text-base-black font-semibold font-inter my-3">Email</h1>
-                                <input id="input-email" class="border py-2 px-4 rounded-2xl w-4/5" type="email" placeholder="Enter your email">
+                                <input id="input-email" class="border py-2 px-4 rounded-2xl w-4/5 border-[3px]" type="email" placeholder="Enter your email">
                             </div>
                             <!-- The button to open modal -->
                             <div class="font-roboto text-center">
-                                <button id="modal-open" onclick="my_modal_5.showModal()" class="btn selected-btn cursor-not-allowed" disabled>Next</button>
+                                <button id="modal-open" onclick="my_modal_5.showModal()" class="btn selected-btn cursor-not-allowed w-full" disabled>Next</button>
                                 <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
                                     <div class="modal-box">
                                         <div class="flex justify-center">
@@ -399,7 +399,6 @@
 
     <script src="scripts/utility.js"></script>
     <script src="scripts/index.js"></script>
-    <!-- Put this part before </body> tag -->
 </body>
 
 </html>
