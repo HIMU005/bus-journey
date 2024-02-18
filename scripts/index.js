@@ -4,7 +4,7 @@ let selectTotalSeat = 0;
 let availableForYou = 4;
 let fare = 0;
 let phoneNumberLength = 0;
-const selectedSeat =[];
+let selectedSeat =[];
 
 const seats = document.querySelectorAll(".seat");
 for(let i = 0;i < seats.length; i++) {
@@ -83,6 +83,12 @@ function jumpBack() {
         let store = selectedSeat[i];
         document.getElementById(store).classList.remove("bg-[#1DD100]");
     }
+    selectedSeat = [];
+    // setNumberById('input-coupon', " ");
+    document.getElementById('input-coupon').value = "";
+    document.getElementById('input-name').value = "";
+    document.getElementById('input-email').value = "";
+    document.getElementById('input-phone').value = "";
     }
 
     
