@@ -80,8 +80,8 @@
                             class="text-primary-color">H Paribahan</span></h1>
                     <p class="mb-5 font-inter text-lg text-center">Travel Travel Travel Travel Travel Travel Travel
                         Travel Travel </p>
-                    <button class="btn btn-success bg-primary-color text-base-black text-xl font-bold border-[0px]">Buy
-                        Tickets</button>
+                    <button class="btn btn-success bg-primary-color text-base-black text-xl font-bold border-[0px]"> <a href="#main-main">Buy
+                        Tickets</a></button>
                 </div>
             </div>
         </div>
@@ -158,7 +158,7 @@
         </div>
         
         <!-- main main section  -->
-        <div class="my-12 border border-primary-color bg-white rounded-t-[88px] py-16">
+        <div id="main-main" class="my-12 border border-primary-color bg-white rounded-t-[88px] py-16">
             <div class="my-8">
                 <h2 class="text-4xl font-bold text-base-black text-center">H Paribahan</h2>
                 <p class="text-lg text-center text-[#03071299]">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
@@ -327,18 +327,18 @@
                             <h2>BDT <span id="total-price">0</span></h2>
                         </div>
                         <!-- coupon  -->
-                        <div class="flex justify-between bg-btn-color">
+                        <div id="coupon-div" class="flex justify-between bg-btn-color">
                             <input id="input-coupon" class="ml-3 w-4/5 bg-white border rounded-xl" type="text" placeholder="Have any copupon?">
                             <button onclick="checkValid()" id="apply-btn" class="btn selected-btn " disabled>Apply</button>
                         </div>
                         <!-- discount part  -->
-                        <div id="discount-amount" class="flex justify-between">
+                        <div id="discount-amount" class="flex justify-between font-inter font-mono text-base-black bg-btn-color p-4">
 
                         </div>
                         <!-- grand total  -->
                         <div class="flex justify-between font-inter font-mono text-base-black bg-btn-color rounded-b-2xl p-4">
                             <h1 class="text-base-black">Grand Total</h1>
-                            <h2>BDT <span id="total-price">0</span></h2>
+                            <h2>BDT <span id="grand-price">0</span></h2>
                         </div>
                         </div>
                         <!-- informatin list  -->
@@ -360,16 +360,13 @@
                             </div>
                             <!-- The button to open modal -->
                             <div class="font-roboto text-center">
-                                <button id="modal-open" for="my_modal_6" class="btn selected-btn cursor-not-allowed" disabled>open modal</button>
+                                <button id="modal-open" for="my_modal_6" class="btn selected-btn cursor-not-allowed" disabled>Next</button>
 
                             </div>
                         </section>
                     </div>
                 </div>
-
             </div>
-
-
         </div>
 
     </main>

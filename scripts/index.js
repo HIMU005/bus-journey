@@ -1,8 +1,11 @@
+const phone = document.getElementById('input-phone');
 let availableSeat = 40;
 let selectTotalSeat = 0;
 let availableForYou = 4;
 let fare = 0;
-let PhoneNumberLength = 0;
+let phoneNumberLength = 0;
+const selectedSeat =[];
+
 const seats = document.querySelectorAll(".seat");
 for(let i = 0;i < seats.length; i++) {
     const seat = seats[i];
@@ -22,7 +25,13 @@ for(let i = 0;i < seats.length; i++) {
         div.appendChild(h2);
         div.appendChild(h3);
         makeItFlexByContainer(div);
-        if(availableForYou > 0){
+        if(selectedSeat.includes(seat.innerText))
+        {
+            alert("You can't select a seat multiple time");
+        }
+        if(availableForYou > 0 && !selectedSeat.includes(seat.innerText)){
+                selectedSeat.push(seat.innerText);
+            
             const nowAvailableSeat = getNumberById('available-seat');
             setNumberById('available-seat', nowAvailableSeat-1);
             setNumberById('selected-seat-number', ++selectTotalSeat);
@@ -30,18 +39,23 @@ for(let i = 0;i < seats.length; i++) {
             setBackgroundByElement(seat);
             fare+= 550;
             setNumberById('total-price', fare);
+            document.getElementById('grand-price').innerText = fare;
         }
         else {
             availableForYou++;
         }
-
         if(fare>2000) {
             makeButtonAble('apply-btn');
         }
-        const phone = document.getElementById('input-phone').value;
-        if(phone.length  && selectTotalSeat) {
-            makeButtonAble('modal-open');
-        }
+        // const phone = document.getElementById('input-phone');
+        // phoneNumber = phone.addEventListener("change", function(e) {
+        //     phoneNumberLength = e.target.value;
+        //     console.log(phoneNumberLength);
+        // })
+
+        // if(phone.length  && selectTotalSeat) {
+        //     makeButtonAble('modal-open');
+        // }
 
 
 
@@ -49,4 +63,14 @@ for(let i = 0;i < seats.length; i++) {
         
     })
 }
+
+phoneNumber = phone.addEventListener("input", function(e) {
+    phoneNumberLength = e.target.value.length;
+    if(phoneNumberLength  && selectTotalSeat) {
+        makeButtonAble('modal-open');
+    }
+})
+
+
+
 

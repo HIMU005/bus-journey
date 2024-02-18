@@ -48,15 +48,18 @@ function checkValid() {
         disCountPart.appendChild(h1);
         disCountPart.appendChild(h2);
         console.log(typeof disCountPart);
-        document.getElementById('total-price').innerText = fare - disCountPart;
-        
+        document.getElementById('grand-price').innerText = fare - discountPrice;
+        document.querySelector('#coupon-div').classList.add("hidden");
+
+
     }
     else{
         alert("Coupon code INVALID!!!!!!!!!!Enter the right coupon code");
         document.getElementById('input-coupon').value = "";
     }
-    
 }
+
+
 
 // function removeAllowCursorById() {
 //     const element = document.querySelector(elementID);
